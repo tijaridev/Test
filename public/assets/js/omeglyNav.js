@@ -31,7 +31,7 @@ const showCountry = async () => {
 const profileButton = document.createElement("button");
 profileButton.classList.add("css-1lx2cov", "eklcrjq6");
 profileButton.innerHTML = `
-    <img class="eklcrjq5 e1kwc9060 css-12ppu4d e1j9vfoi1" src="http://localhost:5500/assets/images/profile/imgProfile@3x.png" alt="profile image" />
+    <img class="eklcrjq5 e1kwc9060 css-12ppu4d e1j9vfoi1" src="/assets/images/profile/imgProfile@3x.png" alt="profile image" />
   `;
 
 const loginButton = document.createElement("button");
@@ -80,7 +80,7 @@ if (token) {
           <div class="css-i358y3 e10zsgn013">
             <div class="css-10ctojh ecjwe8u19">
               <div class="css-lfqgbi ecjwe8u14">
-                <img class="ecjwe8u18 e1kwc9060 css-r0mqrf e1j9vfoi1" src="http://localhost:5500/assets/images/profile/imgProfile@3x.png" alt="profile image" />
+                <img class="ecjwe8u18 e1kwc9060 css-r0mqrf e1j9vfoi1" src="/assets/images/profile/imgProfile@3x.png" alt="profile image" />
                 <div width="10" class="css-s6qup9 e8gdg6k0"></div>
                 <div class="css-3z2sxu ecjwe8u13">
                   <div class="css-1s24z4b ecjwe8u3">
@@ -88,13 +88,13 @@ if (token) {
                   </div>
                   <div class="css-s5xdrg ecjwe8u12">
                     <div class="css-s5xdrg ecjwe8u10">
-                      <img class="ecjwe8u9 css-r7qj1m e1j9vfoi1" src="${uriFlag(countryID)}" alt="http://localhost:5500/assets/svg/1f1ee-1f1e9.svg" />
+                      <img class="ecjwe8u9 css-r7qj1m e1j9vfoi1" src="${uriFlag(countryID)}" alt="/assets/svg/1f1ee-1f1e9.svg" />
                       <div width="4" class="css-1jtl2mg e8gdg6k0"></div>
                       <span class="css-8ljgdx ecjwe8u8">${countryID}</span>
                     </div>
                     <div class="css-jlg4pg ecjwe8u2"></div>
                     <div class="css-1fdwpy7 ecjwe8u1">
-                      <img src="${gender == "male" ? "http://localhost:5500/assets/images/icons/icGenderMALE.svg" : "http://localhost:5500/assets/images/icons/icGenderFEMALE.svg"}" alt="gender" class="css-1suksrg ecjwe8u0" />
+                      <img src="${gender == "male" ? "/assets/images/icons/icGenderMALE.svg" : "/assets/images/icons/icGenderFEMALE.svg"}" alt="gender" class="css-1suksrg ecjwe8u0" />
                       <div width="4" class="css-1jtl2mg e8gdg6k0"></div>
                       ${capitalizeFirstLetter(gender)}
                     </div>
@@ -104,24 +104,24 @@ if (token) {
               <div class="css-101m303 ecjwe8u7"></div>
               <div class="css-1j9s6ik ecjwe8u6">
                 <button class="css-18487hx ecjwe8u5" onclick="displayEditProfileModal()">
-                  <img src="http://localhost:5500/assets/images/icons/icPersonWhite.svg" alt="logout" class="css-0 ecjwe8u17" />
+                  <img src="/assets/images/icons/icPersonWhite.svg" alt="logout" class="css-0 ecjwe8u17" />
                   <div width="10" class="css-s6qup9 e8gdg6k0"></div>
                   <p class="css-nt5f22 ecjwe8u16">Edit Profile</p>
                 </button>
                 <button class="css-18487hx ecjwe8u5">
-                  <img src="http://localhost:5500/assets/images/icons/icMoreWhite.svg" alt="logout" class="css-0 ecjwe8u17" />
+                  <img src="/assets/images/icons/icMoreWhite.svg" alt="logout" class="css-0 ecjwe8u17" />
                   <div width="10" class="css-s6qup9 e8gdg6k0"></div>
                   <p class="css-nt5f22 ecjwe8u16">More</p>
                 </button>
                 <a target="_blank" rel="noopener noreferrer" class="css-1o05yxp ecjwe8u4">
                   <button class="css-18487hx ecjwe8u5">
-                    <img src="http://localhost:5500/assets/images/icons/icEditWhite.svg" alt="logout" class="css-0 ecjwe8u17" />
+                    <img src="/assets/images/icons/icEditWhite.svg" alt="logout" class="css-0 ecjwe8u17" />
                     <div width="10" class="css-s6qup9 e8gdg6k0"></div>
                     <p class="css-nt5f22 ecjwe8u16">Contact us</p>
                   </button>
                 </a>
                 <button class="css-18487hx ecjwe8u5" id="logoutButton" onclick="logout()">
-                  <img src="http://localhost:5500/assets/images/icons/icExitWhite.svg" alt="logout" class="css-0 ecjwe8u17" />
+                  <img src="/assets/images/icons/icExitWhite.svg" alt="logout" class="css-0 ecjwe8u17" />
                   <div width="10" class="css-s6qup9 e8gdg6k0"></div>
                   <p class="css-nt5f22 ecjwe8u16">Log out</p>
                 </button>
@@ -191,7 +191,7 @@ function displayEditProfileModal() {
               <div class="css-1fgdcyd e18x3yiw18">
                 <div class="css-1s6whzq e18x3yiw24" style="position: relative; height: 157px;">
                   <div class="GridItem" style="z-index: 0; position: absolute; width: 118.667px; opacity: 1; height: 157px; box-sizing: border-box; transform: translate3d(0px, 0px, 0px) scale(1);">
-                    <div class="css-50lz65 e18x3yiw4" style="background-image: url(&quot;http://localhost:5500/assets/images/profile/imgProfile.png&quot;);">
+                    <div class="css-50lz65 e18x3yiw4" style="background-image: url(&quot;/assets/images/profile/imgProfile.png&quot;);">
                       <div class="css-47lhhw e18x3yiw3">Main</div>
                       <label for="profile-image-edit-main-file" class="css-8s60sr e18x3yiw0">
                         <img src="assets/images/icons/icEdit.svg" alt="Edit First Profile Card" class="css-157xhr7 e18x3yiw13">

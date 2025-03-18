@@ -33,8 +33,7 @@ const coverImageContainer = document.createElement("div");
 coverImageContainer.classList.add("css-tf675", "e1d2bgi7");
 
 const coverImage = document.createElement("img");
-coverImage.src =
-  "http://localhost:5500/assets/images/live/omegly-card-placeholder.png";
+coverImage.src = "/assets/images/live/omegly-card-placeholder.png";
 coverImage.classList.add("css-6jrdpz", "e1d2bgi8");
 coverImageContainer.appendChild(coverImage);
 
@@ -59,7 +58,7 @@ const coverImageEditIconUse = document.createElementNS(
 );
 coverImageEditIconUse.setAttribute(
   "href",
-  "http://localhost:5500/assets/svg/icons.1230a5c1.svg#edit_fill"
+  "/assets/svg/icons.1230a5c1.svg#edit_fill"
 );
 coverImageEditIconSvg.appendChild(coverImageEditIconUse);
 coverImageEditIcon.appendChild(coverImageEditIconSvg);

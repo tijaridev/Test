@@ -83,9 +83,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // Panggil script.js setelah login berhasil
             const script = document.createElement("script");
             if (hostId) {
-              script.src = "http://localhost:5500/assets/js/watchlive.js";
+              script.src = "/assets/js/watchlive.js";
             } else {
-              script.src = "http://localhost:5500/assets/js/live.js";
+              script.src = "/assets/js/live.js";
             }
             document.head.appendChild(script);
           }
@@ -143,9 +143,9 @@ document
             // Panggil script.js setelah login berhasil
             const script = document.createElement("script");
             if (hostId) {
-              script.src = "http://localhost:5500/assets/js/watchlive.js";
+              script.src = "/assets/js/watchlive.js";
             } else {
-              script.src = "http://localhost:5500/assets/js/live.js";
+              script.src = "/assets/js/live.js";
             }
             document.head.appendChild(script);
           }

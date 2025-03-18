@@ -10,7 +10,7 @@ const liveData = [
       "https://d1unckwzkxcoc9.cloudfront.net/public/a3d12231-2c02-470a-9c57-1535fbe412dd.jpeg?w=1000&q=75",
     country: "ID",
     viewers: 5,
-    flagUrl: "http://localhost:5500/assets/svg/1f1ee-1f1e9.svg",
+    flagUrl: "/assets/svg/1f1ee-1f1e9.svg",
   },
   {
     hostId: "ugPCkNHQmFlsx",
@@ -23,7 +23,7 @@ const liveData = [
       "https://d1unckwzkxcoc9.cloudfront.net/public/df497789-8191-469d-85ae-87a62f4380f1.jpeg?w=1000&q=75",
     country: "PH",
     viewers: 4,
-    flagUrl: "http://localhost:5500/assets/svg/1f1ee-1f1e9.svg",
+    flagUrl: "/assets/svg/1f1ee-1f1e9.svg",
   },
   {
     hostId: "upN6qhF2HphGI",
@@ -36,33 +36,29 @@ const liveData = [
       "https://d1unckwzkxcoc9.cloudfront.net/public/bc3828ca-7012-4725-8d92-d2c914ba41ae.jpeg?w=1000&q=75",
     country: "TR",
     viewers: 3,
-    flagUrl: "http://localhost:5500/assets/svg/1f1ee-1f1e9.svg",
+    flagUrl: "/assets/svg/1f1ee-1f1e9.svg",
   },
   {
     hostId: "uC1rTRwS1XbwQ",
     tabType: "for_you",
-    imageUrl:
-      "http://localhost:5500/assets/images/live/omegly-card-placeholder.png",
+    imageUrl: "/assets/images/live/omegly-card-placeholder.png",
     liveTitle: "Kadir35 Canlı Yayını",
     userName: "Kadir35",
-    userImageUrl:
-      "http://localhost:5500/assets/images/live/omegly-card-placeholder.png",
+    userImageUrl: "/assets/images/live/omegly-card-placeholder.png",
     country: "TR",
     viewers: 3,
-    flagUrl: "http://localhost:5500/assets/svg/1f1ee-1f1e9.svg",
+    flagUrl: "/assets/svg/1f1ee-1f1e9.svg",
   },
   {
     hostId: "u7rwmUh5xbeyK",
     tabType: "for_you",
-    imageUrl:
-      "http://localhost:5500/assets/images/live/omegly-card-placeholder.png",
+    imageUrl: "/assets/images/live/omegly-card-placeholder.png",
     liveTitle: "😜",
     userName: "กลับมาแล้วนะ",
-    userImageUrl:
-      "http://localhost:5500/assets/images/live/omegly-card-placeholder.png",
+    userImageUrl: "/assets/images/live/omegly-card-placeholder.png",
     country: "TH",
     viewers: 2,
-    flagUrl: "http://localhost:5500/assets/svg/1f1ee-1f1e9.svg",
+    flagUrl: "/assets/svg/1f1ee-1f1e9.svg",
   },
   {
     hostId: "ubajDTOVJkFI3",
@@ -75,7 +71,7 @@ const liveData = [
       "https://d1unckwzkxcoc9.cloudfront.net/public/fcd78684-4c44-45b0-8c91-a3ce35b64084.jpeg?w=1000&q=75",
     country: "IN",
     viewers: 1,
-    flagUrl: "http://localhost:5500/assets/svg/1f1ee-1f1e9.svg",
+    flagUrl: "/assets/svg/1f1ee-1f1e9.svg",
   },
 ];
 
@@ -134,7 +130,7 @@ function renderLiveList(data) {
     li.innerHTML = `
       <a href="/live/watch/?hostId=${live.hostId}">
         <div class="css-1y9q05k e1k3goks0">
-          <img src="${live.imageUrl ? live.imageUrl : "http://localhost:5500/assets/images/live/omegly-card-placeholder.png"}" class="css-jtscj4 e1k3goks1" />
+          <img src="${live.imageUrl ? live.imageUrl : "/assets/images/live/omegly-card-placeholder.png"}" class="css-jtscj4 e1k3goks1" />
           <div class="css-ygx2yi e1k3goks2">
             <span class="css-tu4d8v e1k3goks3">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="css-wrj12a e1k3goks4">
@@ -147,7 +143,7 @@ function renderLiveList(data) {
             <h3 class="css-1lm2i8 e1k3goks6">${live.liveTitle}</h3>
             <div class="css-1mydqqe e1k3goks7">
               <div width="24" height="24" class="e1k3goks8 css-6068ks e12zsk290">
-                <img src="${live.userImageUrl ? live.userImageUrl : "http://localhost:5500/assets/images/profile/imgProfile@3x.png"}" class="css-9jowez e12zsk291" />
+                <img src="${live.userImageUrl ? live.userImageUrl : "/assets/images/profile/imgProfile@3x.png"}" class="css-9jowez e12zsk291" />
               </div>
               <div class="css-ewnnfc e1k3goks9">
                 <p class="css-1omuqb5 e1k3goks11">${live.userName}</p>
