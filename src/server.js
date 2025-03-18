@@ -24,6 +24,7 @@ const start = async () => {
   try {
     await fastify.listen({
       port: 5500,
+      host: "0.0.0.0",
       // Add any other options you need
     });
     console.log(`Server berjalan di ${fastify.server.address().port}`);
