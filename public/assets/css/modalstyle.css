@@ -1,0 +1,256 @@
+.css-1ykmrgs {
+  z-index: 61;
+  flex-direction: column;
+  flex: 1 1 0%;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  max-height: 100vh;
+  display: flex;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+}
+
+.css-1wnowod {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+[role="button"],
+a,
+a:active,
+a:focus,
+button:active,
+button:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.css-ftu0ti {
+  border-radius: 20px;
+  --background-color: #222222;
+  background-color: var(--background-color);
+  min-width: 400px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 20px;
+  max-width: 700px;
+  bottom: 0px;
+}
+
+.css-i358y3 {
+  width: 100%;
+  height: 100%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.css-i358y3 {
+  max-height: 80dvh;
+}
+
+.css-10ctojh {
+  color: rgb(255, 255, 255);
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 240px;
+  background-color: rgb(34, 34, 34);
+  position: fixed;
+  top: 72px;
+  right: 24px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 20px;
+  border-radius: 20px;
+}
+
+.css-lfqgbi {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 16px;
+  flex-flow: wrap;
+}
+
+.css-r0mqrf {
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+img {
+  border-style: none;
+  -webkit-touch-callout: none;
+}
+
+.css-s6qup9 {
+  flex-shrink: 0;
+  width: 10px;
+}
+
+.css-3z2sxu {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  overflow: hidden;
+}
+
+.css-1s24z4b {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.css-1u48c0q {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+  word-break: keep-all;
+  white-space: pre-wrap;
+}
+
+p {
+  display: block;
+  /* margin-block-start: 1em;
+  margin-block-end: 1em; */
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+.css-s5xdrg {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.css-s5xdrg {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.css-r7qj1m {
+  width: 14px;
+}
+
+.css-1jtl2mg {
+  flex-shrink: 0;
+  width: 4px;
+}
+
+.css-8ljgdx {
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.css-jlg4pg {
+  width: 1px;
+  height: 6px;
+  background-color: rgb(204, 204, 204);
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.css-1fdwpy7 {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(248, 248, 248);
+  font-size: 10px;
+}
+
+.css-1suksrg {
+  width: 12px;
+  height: 12px;
+}
+
+.css-101m303 {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(68, 68, 68);
+  box-sizing: border-box;
+}
+
+.css-1j9s6ik {
+  padding: 16px;
+  width: 100%;
+}
+
+.css-18487hx {
+  display: flex;
+  font-weight: bold;
+  padding: 12px 8px;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 8px;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(34, 34, 34);
+  cursor: pointer;
+}
+
+.css-18487hx:hover,
+.css-18487hx:active {
+  background-color: rgb(68, 68, 68);
+}
+
+.css-s6qup9 {
+  flex-shrink: 0;
+  width: 10px;
+}
+
+.css-nt5f22 {
+  font-size: 16px;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .css-1ykmrgs {
+    z-index: 51;
+  }
+  .css-1wnowod {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+  .css-ftu0ti {
+    width: var(--100vw);
+    position: fixed;
+    bottom: 0px;
+    animation: 0.4s ease-in-out 0s 1 normal none running animation-ty5wq7;
+    border-radius: 20px 20px 0px 0px;
+    max-width: 100%;
+    min-width: auto;
+  }
+  .css-10ctojh {
+    top: 54px;
+    right: 14px;
+    position: static;
+    width: 100%;
+  }
+}

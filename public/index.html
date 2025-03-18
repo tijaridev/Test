@@ -1,0 +1,482 @@
+<!doctype html>
+<html
+  style="
+    --vh: calc(100vh / 100);
+    --100vh: calc(100vh);
+    --vw: calc(100vw / 100);
+    --100vw: calc(100vw);
+  "
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="description" content="Aplikasi video chat Omegly" />
+    <meta name="keywords" content="video chat, omegly, chat, live" />
+    <meta property="og:title" content="Omegly | Video Chat" />
+    <meta
+      property="og:description"
+      content="Omegly random video chat is the best way to meet someone new, make friends and date. Join a vibrant community of millions in the best free video chat alternative to Omegle or OmeTV!"
+    />
+    <meta
+      property="og:image"
+      content="https://omegly3.icaell.com/ms-icon-310x310.png"
+    />
+    <meta property="og:url" content="https://omegly3.icaell.com/" />
+    <meta property="og:site_name" content="Omegly" />
+    <meta property="og:type" content="website" />
+
+    <script
+      defer
+      src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"
+    ></script>
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js"></script>
+    <script defer src="assets/js/localization.js"></script>
+    <script defer src="assets/js/swiped-events.js"></script>
+    <script defer src="assets/js/omegly.js"></script>
+    <script defer src="assets/js/omeglyNav.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/v3style.css" />
+    <link rel="stylesheet" href="assets/css/modalstyle.css" />
+    <title>Omegly | Video Chat</title>
+    <style>
+      :root {
+        --vh: calc(100vh / 100);
+        --100vh: calc(100vh);
+        --vw: calc(100vw / 100);
+        --100vw: calc(100vw);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="video-container">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="assets/img/omegle-logo.svg" alt="Omegly Logo" />
+        </div>
+        <div class="center-menu">
+          <div class="menu-item align-end">
+            <a tabindex="0" role="button" href="/" class="css-p9d6mj ec0z5mr8">
+              <div class="css-98y7pj ec0z5mr9">Video Chat</div>
+              <div class="css-j3m9z7 ec0z5mr7"></div>
+            </a>
+          </div>
+          <div class="menu-item align-start">
+            <a
+              tabindex="0"
+              role="button"
+              href="/live/"
+              class="css-p9d6mj ec0z5mr8"
+            >
+              <div class="css-1a4usay ec0z5mr9">Live</div>
+              <div class="css-ej51b4 ec0z5mr7"></div>
+            </a>
+          </div>
+        </div>
+        <div class="right-menu">
+          <div class="css-s5xdrg eklcrjq4">
+            <button
+              data-testid="HeaderShop-Button"
+              class="css-h5zyr9 e13qz0f00"
+            >
+              <div class="css-1vwzol7 ec0z5mr3">
+                <img
+                  src="assets/images/icons/imgGemSquare.png"
+                  alt="gem"
+                  class="css-1spas8z ec0z5mr2"
+                />
+                <div class="css-1u1ppif ec0z5mr1"></div>
+                <div
+                  data-testid="HeaderShop-amount"
+                  class="css-10ah3dg ec0z5mr0"
+                >
+                  Shop
+                </div>
+              </div>
+            </button>
+            <div width="16" class="css-11hnndh e8gdg6k0"></div>
+            <button
+              data-testid="header-history-button"
+              class="css-vr2e0i e1do94k21"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                class="css-1858nz7 e1do94k22"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16 29.333c7.364 0 13.333-5.97 13.333-13.333 0-7.364-5.97-13.334-13.333-13.334C8.636 2.666 2.667 8.636 2.667 16S8.637 29.333 16 29.333Zm.882-18.87a1.333 1.333 0 1 0-2.667 0v6.462c0 .47.247.905.65 1.145l5.027 2.999a1.333 1.333 0 1 0 1.366-2.29l-4.376-2.611v-5.706Z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <div width="4" class="css-1jtl2mg e8gdg6k0"></div>
+              <span class="css-vwkhz3 e1do94k23">History</span>
+            </button>
+            <div width="16" class="css-12725ho e8gdg6k0"></div>
+          </div>
+        </div>
+      </nav>
+      <div class="css-1ih5zcf e1ppydyg1">
+        <a data-testid="tab-" href="/" class="css-szl60h e1ppydyg0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path
+              fill-rule="evenodd"
+              d="M8 13.334A5.333 5.333 0 1 0 8 2.667a5.333 5.333 0 0 0 0 10.667Zm0 1.333A6.667 6.667 0 1 0 8 1.334a6.667 6.667 0 0 0 0 13.333Z"
+              clip-rule="evenodd"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M6.799 2.662c1.401.857 1.045 2.37-.194 2.872l-.15.058c-.653.27-1.07.843-1.315 1.923l-.026.117c-.232 1.11-1.209 1.585-2.765 1.45l-.112-.01-.185-.126s-.333-2.957 2.035-5.162C6.456 1.58 6.8 2.662 6.8 2.662ZM12.747 4.87s1.318 2.43 1.25 3.404c-.111 1.563-.736 3.011-1.332 3.735-.693.672-1.417.948-1.417.948-.383.209-1.591-.665-2-1.216l-.1-.138c-.248-.362-.297-.604-.249-.975l.02-.144c.067-.513-.047-.86-.61-1.442l-.07-.071-.165-.163-.203-.215-.11-.12c-.25-.28-.338-.428-.377-.639a.734.734 0 0 1 .047-.425c.08-.212.246-.455.514-.742.173-.185.359-.297.575-.303.24-.008.445.101.69.3l.05.043.053.045.112.101.178.168.121.112c.327.292.505.358.67.262.172-.1.278-.25.46-.625l.06-.13c.022-.048.041-.092.06-.14l.03-.073.154-.425c.073-.188.143-.338.255-.544.37-.679.83-.938 1.334-.588ZM6.69 9.913c.575.538.644 1.641-.191 2.372-.644.563-1.448.63-2.337.222l-.99-1.113.028-.67c.764.028 1.262-.123 1.53-.43l.037-.046c.568-.744 1.405-.821 1.923-.335Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          Video Chat
+        </a>
+        <a data-testid="tab-live" href="/live/" class="css-118ebz9 e1ppydyg0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <path
+              fill-rule="evenodd"
+              d="M9.724 1.724c.52-.52 1.365-.52 1.886 0L16 6.114l4.39-4.39a1.333 1.333 0 1 1 1.886 1.886l-3.724 3.724h3.56c4.04 0 6.555 2.96 6.555 7.148v7.036c0 4.189-2.515 7.149-6.556 7.149H10.553c-4.041 0-6.553-2.96-6.553-7.15v-7.035c0-4.188 2.525-7.148 6.553-7.148h2.895L9.724 3.61a1.333 1.333 0 0 1 0-1.886Zm10.34 17.473c.125-.125.284-.318.318-.363.181-.238.272-.533.272-.827 0-.33-.102-.636-.295-.886l-.087-.093a10.2 10.2 0 0 0-.287-.304c-.93-.998-3.358-2.63-4.63-3.13-.192-.078-.68-.25-.941-.26-.25 0-.488.056-.715.17-.284.158-.51.408-.635.703-.08.204-.204.816-.204.828-.125.669-.193 1.757-.193 2.96 0 1.146.068 2.188.17 2.869.003.002.012.051.028.127.046.23.142.708.244.905.25.476.738.77 1.26.77h.045c.34-.01 1.055-.305 1.055-.317 1.203-.499 3.574-2.052 4.527-3.084l.068-.068Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          Live
+        </a>
+        <a
+          data-testid="tab-history"
+          href="/history/"
+          class="css-118ebz9 e1ppydyg0"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <path
+              fill-rule="evenodd"
+              d="M16 29.333c7.364 0 13.333-5.97 13.333-13.333 0-7.364-5.97-13.334-13.333-13.334C8.636 2.666 2.667 8.636 2.667 16S8.637 29.333 16 29.333Zm.882-18.87a1.333 1.333 0 1 0-2.667 0v6.462c0 .47.247.905.65 1.145l5.027 2.999a1.333 1.333 0 1 0 1.366-2.29l-4.376-2.611v-5.706Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          History
+        </a>
+      </div>
+      <div id="video-grid">
+        <div id="videoRemote" data-swipe-threshold="50">
+          <video
+            style="background-color: #000"
+            id="remote-video"
+            autoplay
+            playsinline
+            style="pointer-events: none"
+          ></video>
+          <!-- <div id="standby">
+            <div id="swipeStart">
+              Swipe right to stop <br />
+              swipe left to start or next
+            </div>
+          </div> -->
+          <h6 id="vidoff"></h6>
+          <div id="liveStream" style="display: none">
+            <img
+              id="watermark"
+              src="assets/img/omegle-logo.svg"
+              alt="Omegly Logo"
+            />
+          </div>
+          <div class="css-1y1tym3 e1nlhvk56">
+            <div class="css-1eamusa e1nlhvk54">
+              <div
+                direction="up"
+                src="assets/images/match/cardImage/desktopUS01.png"
+                class="css-18hs9w7"
+              ></div>
+              <div width="8" class="css-zwqd1z e1nlhvk57"></div>
+              <div
+                direction="down"
+                src="assets/images/match/cardImage/desktopUS02.png"
+                class="css-14383gq"
+              ></div>
+              <div width="8" class="css-zwqd1z e1nlhvk57"></div>
+              <div
+                direction="up"
+                src="assets/images/match/cardImage/desktopUS03.png"
+                class="css-nc4qbk"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="videoLocal">
+          <video
+            muted
+            id="local-video"
+            loop
+            autoplay
+            playsinline
+            style="pointer-events: none"
+            src="assets/videos/Leftside_Web.mp4"
+          ></video>
+          <h6 id="vidoff"></h6>
+          <div id="standby">
+            <div class="image-container"></div>
+            <img id="logo" src="assets/img/omegle-logo.svg" alt="Omegly Logo" />
+            <div id="online-count">
+              <div style="color: chartreuse; padding-right: 5px">◉</div>
+              <h3>0 are matching now!</h3>
+            </div>
+            <div id="swipeStart">
+              Swipe right to stop <br />
+              swipe left to start or next
+            </div>
+          </div>
+          <div id="liveStream" style="display: none">
+            <img
+              id="watermark"
+              src="assets/img/omegle-logo.svg"
+              alt="Omegly Logo"
+            />
+          </div>
+          <!-- <div id="settings" style="display: none">
+            <div id="settingsButton">
+              <button
+                class="buttonSettings"
+                type="button"
+                onclick="openSettings()"
+              >
+                <span><i class="fas fa-cog"></i></span>
+                <span>Settings</span>
+              </button>
+            </div>
+          </div> -->
+          <div class="css-w8zjp8 e1d9wwe010">
+            <div class="css-9p605p e1d9wwe07">
+              <button
+                class="e1d9wwe09 css-b0vm6k e1ygtotq2"
+                data-testid="Match-GENDERPreferenceButton-MIRROR"
+              >
+                <div class="css-d43ysx e1d9wwe05"></div>
+                <div width="8" class="css-18bvjnd e8gdg6k0"></div>
+                <div class="css-1grgl27 ekwfj8r0">Gender</div>
+                <div width="6" class="css-1jjdnyk e8gdg6k0"></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  class="css-1jr4k7r e1ygtotq1"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.43 6.348a1.042 1.042 0 0 1 1.473 0L10 11.445l5.097-5.097a1.042 1.042 0 1 1 1.473 1.473l-5.833 5.834a1.042 1.042 0 0 1-1.474 0L3.43 7.82a1.042 1.042 0 0 1 0-1.473Z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              <div width="10" class="css-qbzwqi e1d9wwe06"></div>
+              <button
+                class="e1d9wwe08 css-b0vm6k e1ygtotq2"
+                data-testid="Match-LOCATIONPreferenceButton-MIRROR"
+              >
+                <div class="css-1turmux e1d9wwe04"></div>
+                <div class="e1ygtotq0 css-es25hk evhwoag0">Country</div>
+                <div width="6" class="css-1jjdnyk e8gdg6k0"></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  class="css-1jr4k7r e1ygtotq1"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.43 6.348a1.042 1.042 0 0 1 1.473 0L10 11.445l5.097-5.097a1.042 1.042 0 1 1 1.473 1.473l-5.833 5.834a1.042 1.042 0 0 1-1.474 0L3.43 7.82a1.042 1.042 0 0 1 0-1.473Z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div width="10" class="css-1wj2lpu e8gdg6k0"></div>
+            <button
+              data-testid="match-intro-start"
+              class="e1d9wwe00 css-1l3c96s e1vjnkbo2"
+              color="secondary"
+              onclick="startVideoChat()"
+            >
+              <div width="14" class="css-64ad5l e8gdg6k0"></div>
+              <div class="css-1hrmjzy e1vjnkbo5"></div>
+              <div class="css-10m7q4t egjahh61">
+                <div class="css-1yu7ayt e1vjnkbo4">
+                  <img
+                    src="assets/images/icons/icVideo-white.svg"
+                    alt="video"
+                    class="css-157xhr7 e1vjnkbo3"
+                  />
+                </div>
+                <img
+                  src="assets/images/dummyFaces/imgRandomMALE4.png"
+                  alt="face0"
+                  class="css-135fimc egjahh60"
+                /><img
+                  src="assets/images/dummyFaces/imgRandomMALE9.png"
+                  alt="face1"
+                  class="css-1pcqk31 egjahh60"
+                /><img
+                  src="assets/images/dummyFaces/imgRandomMALE10.png"
+                  alt="face2"
+                  class="css-1yu58fh egjahh60"
+                /><img
+                  src="assets/images/dummyFaces/imgRandomFEMALE3.png"
+                  alt="face3"
+                  class="css-4yikkj egjahh60"
+                /><img
+                  src="assets/images/dummyFaces/imgRandomMALE17.png"
+                  alt="face4"
+                  class="css-5klucc egjahh60"
+                /><img
+                  src="assets/images/dummyFaces/imgRandomMALE18.png"
+                  alt="face5"
+                  class="css-1sftqjt egjahh60"
+                />
+              </div>
+              <div class="css-1pz37qw e1vjnkbo0"></div>
+              <span class="css-1ij3pa3 e1vjnkbo1">Start Video Chat</span>
+              <div width="16" class="css-11evzvv e8gdg6k0"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="chat-container" style="display: none">
+      <div id="chat-box">
+        <div id="msg-container">
+          <ul id="messages"></ul>
+        </div>
+        <form id="form" action="">
+          <input type="text" id="input" placeholder="Message" />
+        </form>
+      </div>
+      <div id="buttons-box">
+        <button id="stop" onclick="stopStream()">Stop</button>
+        <button id="start" onclick="joinRoom()">Start</button>
+      </div>
+    </div>
+    <div id="bottom-bar">
+      <div>Omegly 2024</div>
+    </div>
+
+    <!-- Update -->
+
+    <div id="authPopup" class="overlay">
+      <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active">Sign In</h2>
+          <h2 class="inactive underlineHover" onclick="openSignUp()">
+            Sign Up
+          </h2>
+
+          <!-- Login Form -->
+          <form id="loginForm">
+            <input
+              type="text"
+              id="loginEmail"
+              name="login"
+              placeholder="Email"
+            />
+            <input
+              type="password"
+              id="loginPassword"
+              name="login"
+              placeholder="Password"
+            />
+            <input type="submit" value="Log In" />
+          </form>
+        </div>
+        <div id="formSignUpContent">
+          <!-- Tabs Titles -->
+          <h2 class="inactive underlineHover" onclick="closeSignUp()">
+            Sign In
+          </h2>
+          <h2 class="active">Sign Up</h2>
+
+          <!-- Register Form -->
+          <form id="registerForm">
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">Male</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              required
+            />
+            <label for="female">Female</label>
+            <input
+              type="text"
+              id="registerEmail"
+              name="registerEmail"
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Full Name"
+            />
+            <input
+              type="password"
+              id="registerPassword"
+              name="registerPassword"
+              placeholder="Password"
+            />
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+            />
+            <input type="submit" value="Register" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="popupReport" class="overlay">
+      <div class="wrapper">
+        <div id="settingsContent">
+          <div id="output"></div>
+          <h4>Do you really want to report an abuse for this user?</h4>
+          <br />
+          <button onclick="reportUser()">Yes</button>
+          <button onclick="closeReport()">No</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="popupSettings" class="overlay">
+      <div class="wrapper">
+        <div id="settingsContent">
+          <a href="#" onclick="closeSettings()" class="close">&times;</a>
+          <button onclick="logout()">Log Out</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

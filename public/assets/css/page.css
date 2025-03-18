@@ -1,0 +1,339 @@
+.logo h1,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+nav.vertical ul li,
+section {
+  display: block;
+}
+.buttom,
+.copy_right,
+.copy_right a:hover,
+.logo span {
+  color: #fff;
+}
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+mark,
+menu,
+nav,
+nav li,
+nav ul,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+h2 {
+  color: #fff;
+}
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  color: #1ed760;
+  text-decoration: none;
+}
+.txt-rt {
+  text-align: right;
+}
+.txt-lt {
+  text-align: left;
+}
+.buttom,
+.copy_right,
+.logo,
+.txt-center {
+  text-align: center;
+}
+.float-rt {
+  float: right;
+}
+.float-lt {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+.pos-relative {
+  position: relative;
+}
+.pos-absolute {
+  position: absolute;
+}
+.vertical-base {
+  vertical-align: baseline;
+}
+.vertical-top {
+  vertical-align: top;
+}
+.underline {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 20px;
+}
+nav.horizontal ul li {
+  display: inline-block;
+}
+img {
+  max-width: 100%;
+}
+body {
+  background: url(/assets/img/bg.jpg) 100% / cover no-repeat fixed;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Poppins Arial,
+    sans-serif;
+  font-size: 100%;
+}
+.wrap {
+  width: 70%;
+  margin: 5.2% auto 4%;
+}
+.content {
+  padding-bottom: 10%;
+}
+.logo {
+  padding: 1% 1% 5%;
+}
+.logo h1 {
+  padding: 2em 0;
+}
+.logo span {
+  font-size: 4em;
+}
+.logo span img {
+  width: 40px;
+  height: 40px;
+  vertical-align: bottom;
+  margin: 0 10px;
+}
+.buttom {
+  width: 556px;
+  vertical-align: middle;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: large;
+}
+.copy_right a {
+  color: #1ed760;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+#installForm > input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+  background-color: #393e4650;
+  color: #eeeeee;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+}
+input {
+  outline: none;
+}
+#helperText {
+  padding: 20px;
+  display: flex;
+  text-align: left;
+  position: relative;
+  font-size: small;
+}
+::placeholder {
+  color: white;
+  opacity: 0.5; /* Firefox */
+}
+::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: white;
+}
+#statusText {
+  padding: 20px;
+  color: rgb(255 187 186);
+}
+@media only screen and (max-width: 768px) {
+  .wrap {
+    width: 80%;
+  }
+  .logo img {
+    width: 315px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .wrap {
+    width: 85%;
+  }
+  .logo {
+    padding: 1% 1% 12%;
+  }
+  .buttom {
+    width: 515px;
+  }
+  .logo img {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .wrap {
+    width: 90%;
+  }
+  .logo {
+    padding: 1% 1% 30%;
+  }
+  .buttom {
+    width: 80%;
+  }
+  .logo span {
+    font-size: 1.6em;
+  }
+  .seach_bar p {
+    font-size: 1.2em;
+    margin: 2.6em 0 0.7em;
+  }
+  .search_box {
+    padding: 3px 10px;
+  }
+  .logo img {
+    width: 270px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .wrap {
+    width: 90%;
+  }
+  .logo {
+    padding: 1% 1% 12%;
+  }
+  .buttom {
+    width: 290px;
+  }
+  .logo span {
+    font-size: 1.4em;
+  }
+  .seach_bar p {
+    font-size: 1em;
+    margin: 1.5em 0 2em;
+  }
+  .logo span img {
+    vertical-align: middle;
+  }
+  .logo img {
+    width: 200px;
+  }
+  .copy_right {
+    padding: 2em 0 0;
+  }
+}
